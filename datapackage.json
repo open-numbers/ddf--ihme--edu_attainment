@@ -15,6 +15,7 @@
             "path": "ddf--concepts.csv",
             "name": "ddf--concepts",
             "schema": {
+                "primaryKey": "concept",
                 "fields": [
                     {
                         "name": "concept"
@@ -25,22 +26,28 @@
                     {
                         "name": "concept_type"
                     }
-                ],
-                "primaryKey": "concept"
+                ]
             }
         },
         {
-            "path": "ddf--datapoints--age_standardized_education_per_capita_lower--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--age_standardized_education_per_capita_lower--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--age_standardized_education_per_capita_lower--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--age_standardized_education_per_capita_lower--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -48,25 +55,28 @@
                     {
                         "name": "age_standardized_education_per_capita_lower"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
         {
-            "path": "ddf--datapoints--age_standardized_education_per_capita_mean--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--age_standardized_education_per_capita_mean--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--age_standardized_education_per_capita_mean--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--age_standardized_education_per_capita_mean--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -74,25 +84,28 @@
                     {
                         "name": "age_standardized_education_per_capita_mean"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
         {
-            "path": "ddf--datapoints--age_standardized_education_per_capita_upper--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--age_standardized_education_per_capita_upper--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--age_standardized_education_per_capita_upper--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--age_standardized_education_per_capita_upper--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -100,25 +113,28 @@
                     {
                         "name": "age_standardized_education_per_capita_upper"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
         {
-            "path": "ddf--datapoints--education_per_capita_lower--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--education_per_capita_lower--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--education_per_capita_lower--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--education_per_capita_lower--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -126,25 +142,28 @@
                     {
                         "name": "education_per_capita_lower"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
         {
-            "path": "ddf--datapoints--education_per_capita_mean--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--education_per_capita_mean--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--education_per_capita_mean--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--education_per_capita_mean--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -152,25 +171,28 @@
                     {
                         "name": "education_per_capita_mean"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
         {
-            "path": "ddf--datapoints--education_per_capita_upper--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--education_per_capita_upper--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--education_per_capita_upper--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--education_per_capita_upper--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -178,25 +200,28 @@
                     {
                         "name": "education_per_capita_upper"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
         {
-            "path": "ddf--datapoints--population_weighted_education_per_capita_lower--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--population_weighted_education_per_capita_lower--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--population_weighted_education_per_capita_lower--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--population_weighted_education_per_capita_lower--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -204,25 +229,28 @@
                     {
                         "name": "population_weighted_education_per_capita_lower"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
         {
-            "path": "ddf--datapoints--population_weighted_education_per_capita_mean--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--population_weighted_education_per_capita_mean--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--population_weighted_education_per_capita_mean--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--population_weighted_education_per_capita_mean--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -230,25 +258,28 @@
                     {
                         "name": "population_weighted_education_per_capita_mean"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
         {
-            "path": "ddf--datapoints--population_weighted_education_per_capita_upper--by--location_id-sex_id--year.csv",
-            "name": "ddf--datapoints--population_weighted_education_per_capita_upper--by--location_id-sex_id--year",
+            "path": "ddf--datapoints--population_weighted_education_per_capita_upper--by--location_id--age_group_id--sex_id--year.csv",
+            "name": "ddf--datapoints--population_weighted_education_per_capita_upper--by--location_id--age_group_id--sex_id--year",
             "schema": {
+                "primaryKey": [
+                    "location_id",
+                    "age_group_id",
+                    "sex_id",
+                    "year"
+                ],
                 "fields": [
                     {
-                        "name": "location_id",
-                        "constraints": {
-                            "enum": [
-                                "sex_id"
-                            ]
-                        }
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "sex_id"
                     },
                     {
                         "name": "year"
@@ -256,10 +287,6 @@
                     {
                         "name": "population_weighted_education_per_capita_upper"
                     }
-                ],
-                "primaryKey": [
-                    "location_id",
-                    "year"
                 ]
             }
         },
@@ -267,6 +294,7 @@
             "path": "ddf--entities--age_group_id.csv",
             "name": "ddf--entities--age_group_id",
             "schema": {
+                "primaryKey": "age_group_id",
                 "fields": [
                     {
                         "name": "age_group_id"
@@ -274,14 +302,14 @@
                     {
                         "name": "age_group_name"
                     }
-                ],
-                "primaryKey": "age_group_id"
+                ]
             }
         },
         {
             "path": "ddf--entities--location_id.csv",
             "name": "ddf--entities--location_id",
             "schema": {
+                "primaryKey": "location_id",
                 "fields": [
                     {
                         "name": "location_id"
@@ -292,14 +320,14 @@
                     {
                         "name": "location_name"
                     }
-                ],
-                "primaryKey": "location_id"
+                ]
             }
         },
         {
             "path": "ddf--entities--sex_id.csv",
             "name": "ddf--entities--sex_id",
             "schema": {
+                "primaryKey": "sex_id",
                 "fields": [
                     {
                         "name": "sex_id"
@@ -307,8 +335,7 @@
                     {
                         "name": "sex_name"
                     }
-                ],
-                "primaryKey": "sex_id"
+                ]
             }
         }
     ]

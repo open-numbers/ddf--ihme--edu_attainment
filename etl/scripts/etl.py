@@ -49,10 +49,12 @@ if __name__ == '__main__':
 
             # save datapoints
             df = df.rename(columns={i: measure})
-            df[['location_id', 'year', 'sex_id', measure]].to_csv(
+            df[[
+                'location_id', 'age_group_id', 'sex_id', 'year', measure
+            ]].to_csv(
                 os.path.join(
                     out_path,
-                    'ddf--datapoints--{}--by--location_id-sex_id--year.csv'.
+                    'ddf--datapoints--{}--by--location_id--age_group_id--sex_id--year.csv'.
                     format(measure)),
                 index=False,
                 float_format='%.2f')
