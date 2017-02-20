@@ -1,11 +1,11 @@
 concept,name,concept_type
-location_id,Location ID,entity_domain
+location_id,Location ID,string
 location_code,"Country ISO 3166-1 Alpha-3 Code, GBD Region Code, or GBD Super-Region Code",string
 location_name,"Country, Region, or Super-Region Name",string
 year,Year,time
-age_group_id,Age Group ID,entity_domain
+age_group_id,Age Group ID,string
 age_group_name,Age Group Name,string
-sex_id,Sex ID,entity_domain
+sex_id,Sex ID,string
 sex_name,Sex Name,string
 age_standardized_education_per_capita_mean,Age Standardized Education Per Capita: Mean,measure
 age_standardized_education_per_capita_lower,"Age Standardized Education Per Capita, 95% Uncertainty Interval - Lower Bound",measure
@@ -16,4 +16,7 @@ education_per_capita_upper,"Education Per Capita, 95% Uncertainty Interval - Upp
 population_weighted_education_per_capita_mean,Population Weighted Education Per Capita: Mean,measure
 population_weighted_education_per_capita_lower,"Population Weighted Education Per Capita, 95% Uncertainty Interval - Lower Bound",measure
 population_weighted_education_per_capita_upper,"Population Weighted Education Per Capita, 95% Uncertainty Interval - Upper Bound",measure
+location,Location,entity_domain
+sex,Sex,entity_domain
+age_group,Age Group,entity_domain
 name,Name,string

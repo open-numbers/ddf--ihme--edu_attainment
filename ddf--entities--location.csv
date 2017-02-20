@@ -1,0 +1,218 @@
+location,location_id,location_code,location_name
+afg,160,AFG,Afghanistan
+ago,168,AGO,Angola
+alb,43,ALB,Albania
+and,74,AND,Andorra
+are,156,ARE,United Arab Emirates
+arg,97,ARG,Argentina
+arm,33,ARM,Armenia
+atg,105,ATG,Antigua and Barbuda
+aus,71,AUS,Australia
+aut,75,AUT,Austria
+aze,34,AZE,Azerbaijan
+bdi,175,BDI,Burundi
+bel,76,BEL,Belgium
+ben,200,BEN,Benin
+bfa,201,BFA,Burkina Faso
+bgd,161,BGD,Bangladesh
+bgr,45,BGR,Bulgaria
+bhr,140,BHR,Bahrain
+bhs,106,BHS,The Bahamas
+bih,44,BIH,Bosnia and Herzegovina
+blr,57,BLR,Belarus
+blz,108,BLZ,Belize
+bol,121,BOL,Bolivia
+bra,135,BRA,Brazil
+brb,107,BRB,Barbados
+brn,66,BRN,Brunei
+btn,162,BTN,Bhutan
+bwa,193,BWA,Botswana
+caf,169,CAF,Central African Republic
+can,101,CAN,Canada
+che,94,CHE,Switzerland
+chl,98,CHL,Chile
+chn,6,CHN,China
+civ,205,CIV,Cote d'Ivoire
+cmr,202,CMR,Cameroon
+cod,171,COD,Democratic Republic of the Congo
+cog,170,COG,Congo
+col,125,COL,Colombia
+com,176,COM,Comoros
+cpv,203,CPV,Cape Verde
+cri,126,CRI,Costa Rica
+cub,109,CUB,Cuba
+cyp,77,CYP,Cyprus
+cze,47,CZE,Czech Republic
+deu,81,DEU,Germany
+dji,177,DJI,Djibouti
+dma,110,DMA,Dominica
+dnk,78,DNK,Denmark
+dom,111,DOM,Dominican Republic
+dza,139,DZA,Algeria
+ecu,122,ECU,Ecuador
+egy,141,EGY,Egypt
+eri,178,ERI,Eritrea
+esp,92,ESP,Spain
+est,58,EST,Estonia
+eth,179,ETH,Ethiopia
+fin,79,FIN,Finland
+fji,22,FJI,Fiji
+fra,80,FRA,France
+fsm,25,FSM,Federated States of Micronesia
+g,1,G,Global
+gab,173,GAB,Gabon
+gbr,95,GBR,United Kingdom
+geo,35,GEO,Georgia
+gha,207,GHA,Ghana
+gin,208,GIN,Guinea
+gmb,206,GMB,The Gambia
+gnb,209,GNB,Guinea-Bissau
+gnq,172,GNQ,Equatorial Guinea
+grc,82,GRC,Greece
+grd,112,GRD,Grenada
+gtm,128,GTM,Guatemala
+guy,113,GUY,Guyana
+hnd,129,HND,Honduras
+hrv,46,HRV,Croatia
+hti,114,HTI,Haiti
+hun,48,HUN,Hungary
+idn,11,IDN,Indonesia
+ind,163,IND,India
+irl,84,IRL,Ireland
+irn,142,IRN,Iran
+irq,143,IRQ,Iraq
+isl,83,ISL,Iceland
+isr,85,ISR,Israel
+ita,86,ITA,Italy
+jam,115,JAM,Jamaica
+jor,144,JOR,Jordan
+jpn,67,JPN,Japan
+kaz,36,KAZ,Kazakhstan
+ken,180,KEN,Kenya
+kgz,37,KGZ,Kyrgyzstan
+khm,10,KHM,Cambodia
+kir,23,KIR,Kiribati
+kor,68,KOR,South Korea
+kwt,145,KWT,Kuwait
+lao,12,LAO,Laos
+lbn,146,LBN,Lebanon
+lbr,210,LBR,Liberia
+lby,147,LBY,Libya
+lca,116,LCA,Saint Lucia
+lka,17,LKA,Sri Lanka
+lso,194,LSO,Lesotho
+ltu,60,LTU,Lithuania
+lux,87,LUX,Luxembourg
+lva,59,LVA,Latvia
+mar,148,MAR,Morocco
+mda,61,MDA,Moldova
+mdg,181,MDG,Madagascar
+mdv,14,MDV,Maldives
+mex,130,MEX,Mexico
+mhl,24,MHL,Marshall Islands
+mkd,49,MKD,Macedonia
+mli,211,MLI,Mali
+mlt,88,MLT,Malta
+mmr,15,MMR,Myanmar
+mne,50,MNE,Montenegro
+mng,38,MNG,Mongolia
+moz,184,MOZ,Mozambique
+mrt,212,MRT,Mauritania
+mus,183,MUS,Mauritius
+mwi,182,MWI,Malawi
+mys,13,MYS,Malaysia
+nam,195,NAM,Namibia
+ner,213,NER,Niger
+nga,214,NGA,Nigeria
+nic,131,NIC,Nicaragua
+nld,89,NLD,Netherlands
+nor,90,NOR,Norway
+npl,164,NPL,Nepal
+nzl,72,NZL,New Zealand
+omn,150,OMN,Oman
+pak,165,PAK,Pakistan
+pan,132,PAN,Panama
+per,123,PER,Peru
+phl,16,PHL,Philippines
+png,26,PNG,Papua New Guinea
+pol,51,POL,Poland
+prk,7,PRK,North Korea
+prt,91,PRT,Portugal
+pry,136,PRY,Paraguay
+pse,149,PSE,Palestine
+qat,151,QAT,Qatar
+r1,65,R1,High-income Asia Pacific
+r10,73,R10,Western Europe
+r11,120,R11,Andean Latin America
+r12,124,R12,Central Latin America
+r13,96,R13,Southern Latin America
+r14,134,R14,Tropical Latin America
+r15,138,R15,North Africa and Middle East
+r16,100,R16,High-income North America
+r17,21,R17,Oceania
+r18,167,R18,Central Sub-Saharan Africa
+r19,174,R19,Eastern Sub-Saharan Africa
+r2,32,R2,Central Asia
+r20,192,R20,Southern Sub-Saharan Africa
+r21,199,R21,Western Sub-Saharan Africa
+r3,5,R3,East Asia
+r4,159,R4,South Asia
+r5,9,R5,Southeast Asia
+r6,70,R6,Australasia
+r7,104,R7,Caribbean
+r8,42,R8,Central Europe
+r9,56,R9,Eastern Europe
+rou,52,ROU,Romania
+rus,62,RUS,Russia
+rwa,185,RWA,Rwanda
+s1,64,S1,High-income
+s2,31,S2,"Central Europe, Eastern Europe, and Central Asia"
+s3,166,S3,Sub-Saharan Africa
+s4,137,S4,North Africa and Middle East
+s5,158,S5,South Asia
+s6,4,S6,"Southeast Asia, East Asia, and Oceania"
+s7,103,S7,Latin America and Caribbean
+sau,152,SAU,Saudi Arabia
+sdn,522,SDN,Sudan
+sen,216,SEN,Senegal
+sgp,69,SGP,Singapore
+slb,28,SLB,Solomon Islands
+sle,217,SLE,Sierra Leone
+slv,127,SLV,El Salvador
+som,187,SOM,Somalia
+srb,53,SRB,Serbia
+ssd,435,SSD,South Sudan
+stp,215,STP,Sao Tome and Principe
+sur,118,SUR,Suriname
+svk,54,SVK,Slovakia
+svn,55,SVN,Slovenia
+swe,93,SWE,Sweden
+swz,197,SWZ,Swaziland
+syc,186,SYC,Seychelles
+syr,153,SYR,Syria
+tcd,204,TCD,Chad
+tgo,218,TGO,Togo
+tha,18,THA,Thailand
+tjk,39,TJK,Tajikistan
+tkm,40,TKM,Turkmenistan
+tls,19,TLS,Timor-Leste
+ton,29,TON,Tonga
+tto,119,TTO,Trinidad and Tobago
+tun,154,TUN,Tunisia
+tur,155,TUR,Turkey
+twn,8,TWN,Taiwan
+tza,189,TZA,Tanzania
+uga,190,UGA,Uganda
+ukr,63,UKR,Ukraine
+ury,99,URY,Uruguay
+usa,102,USA,United States
+uzb,41,UZB,Uzbekistan
+vct,117,VCT,Saint Vincent and the Grenadines
+ven,133,VEN,Venezuela
+vnm,20,VNM,Vietnam
+vut,30,VUT,Vanuatu
+wsm,27,WSM,Samoa
+yem,157,YEM,Yemen
+zaf,196,ZAF,South Africa
+zmb,191,ZMB,Zambia
+zwe,198,ZWE,Zimbabwe

@@ -2,6 +2,7 @@
 
 import os
 import pandas as pd
+import numpy as np
 from ddf_utils.str import to_concept_id
 from ddf_utils.index import get_datapackage
 
@@ -30,9 +31,7 @@ if __name__ == '__main__':
     data['metric'] = data['metric'].map(to_concept_id)
 
     # each metric will act as a measure, and there are 3 parts of data
-    # for each measure, and we want each age group a separate indicator.
-    # So we will loop though each metric/age group combination to generate
-    # indicators.
+    # for each measure
     for met in cb.metric.drop(0).dropna().unique():
         met_id = to_concept_id(met)
         df = data.groupby(by='metric').get_group(met_id)
@@ -49,12 +48,15 @@ if __name__ == '__main__':
 
             # save datapoints
             df = df.rename(columns={i: measure})
-            df[[
-                'location_id', 'age_group_id', 'sex_id', 'year', measure
-            ]].to_csv(
+            df_out = df[['location_code', 'age_group_name', 'sex_name', 'year', measure]].copy()
+            df_out.columns = ['location', 'age_group', 'sex', 'year', measure]
+            df_out[
+                ['location', 'age_group', 'sex']] = (df_out[['location', 'age_group', 'sex']]
+                                                     .applymap(to_concept_id))
+            df_out.to_csv(
                 os.path.join(
                     out_path,
-                    'ddf--datapoints--{}--by--location_id--age_group_id--sex_id--year.csv'.
+                    'ddf--datapoints--{}--by--location--age_group--sex--year.csv'.
                     format(measure)),
                 index=False,
                 float_format='%.2f')
@@ -62,14 +64,21 @@ if __name__ == '__main__':
     # entities
     loc = data[['location_id', 'location_code',
                 'location_name']].drop_duplicates()
-    loc.to_csv(
-        os.path.join(out_path, 'ddf--entities--location_id.csv'), index=False)
+    # we use location code for entity key, so we want to assure there are no duplicates
+    assert not np.all(loc['location_name'].duplicated())
+    loc['location'] = loc['location_code'].map(to_concept_id)
+    loc.set_index('location').to_csv(
+        os.path.join(out_path, 'ddf--entities--location.csv'))
+
     sex = data[['sex_id', 'sex_name']].drop_duplicates()
-    sex.to_csv(
-        os.path.join(out_path, 'ddf--entities--sex_id.csv'), index=False)
+    sex['sex'] = sex['sex_name'].map(to_concept_id)
+    sex.set_index('sex').to_csv(
+        os.path.join(out_path, 'ddf--entities--sex.csv'))
+
     age = data[['age_group_id', 'age_group_name']].drop_duplicates()
-    age.to_csv(
-        os.path.join(out_path, 'ddf--entities--age_group_id.csv'), index=False)
+    age['age_group'] = age['age_group_name'].map(to_concept_id)
+    age.set_index('age_group').to_csv(
+        os.path.join(out_path, 'ddf--entities--age_group.csv'))
 
     # concepts
     allcol = cb.ix[0].T
@@ -83,13 +92,19 @@ if __name__ == '__main__':
             'concept': measures,
             'name': names
         }))
+    concepts = concepts.append(
+        pd.DataFrame([['location', 'Location'],
+                      ['sex', 'Sex'],
+                      ['age_group', 'Age Group']],
+                     columns=['concept', 'name']))
     # set concept types
     concepts = concepts.set_index('concept')
     concepts.ix[measures, 'concept_type'] = 'measure'
-    concepts.ix[['location_id', 'sex_id', 'age_group_id'],
+    concepts.ix[['location', 'sex', 'age_group'],
                 'concept_type'] = 'entity_domain'
     concepts.ix[[
-        'location_code', 'location_name', 'sex_name', 'age_group_name'
+        'location_code', 'location_name', 'sex_name', 'age_group_name',
+        'location_id', 'sex_id', 'age_group_id'
     ], 'concept_type'] = 'string'
     concepts.ix['year', 'concept_type'] = 'time'
     concepts.ix['name', ['concept_type', 'name']] = ['string', 'Name']
