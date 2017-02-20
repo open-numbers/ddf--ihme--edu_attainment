@@ -35,29 +35,27 @@ if __name__ == '__main__':
     # indicators.
     for met in cb.metric.drop(0).dropna().unique():
         met_id = to_concept_id(met)
-        d1 = data.groupby(by='metric').get_group(met_id)
-        for g, idxs in d1.groupby('age_group_name').groups.items():
-            df = d1.ix[idxs].copy()
-            for i in ['mean', 'lower', 'upper']:
-                # append the measure and measure name lists.
-                measure = '{}_{}_{}'.format(met_id, to_concept_id(g), i)
-                measures.append(measure)
-                if i in ['lower', 'upper']:
-                    name = '{}, Age {}: 95% Uncertainty Interval - {} Bound'.format(
-                        met, g, i.title())
-                else:
-                    name = '{}, Age {}: Mean'.format(met, g)
-                names.append(name)
+        df = data.groupby(by='metric').get_group(met_id)
+        for i in ['mean', 'lower', 'upper']:
+            # append the measure and measure name lists.
+            measure = '{}_{}'.format(met_id, i)
+            measures.append(measure)
+            if i in ['lower', 'upper']:
+                name = '{}, 95% Uncertainty Interval - {} Bound'.format(
+                    met, i.title())
+            else:
+                name = '{}: Mean'.format(met)
+            names.append(name)
 
-                # save datapoints
-                df = df.rename(columns={i: measure})
-                df[['location_id', 'year', 'sex_id', measure]].to_csv(
-                    os.path.join(
-                        out_path,
-                        'ddf--datapoints--{}--by--location_id-sex_id--year.csv'.
-                        format(measure)),
-                    index=False,
-                    float_format='%.2f')
+            # save datapoints
+            df = df.rename(columns={i: measure})
+            df[['location_id', 'year', 'sex_id', measure]].to_csv(
+                os.path.join(
+                    out_path,
+                    'ddf--datapoints--{}--by--location_id-sex_id--year.csv'.
+                    format(measure)),
+                index=False,
+                float_format='%.2f')
 
     # entities
     loc = data[['location_id', 'location_code',
@@ -67,14 +65,14 @@ if __name__ == '__main__':
     sex = data[['sex_id', 'sex_name']].drop_duplicates()
     sex.to_csv(
         os.path.join(out_path, 'ddf--entities--sex_id.csv'), index=False)
+    age = data[['age_group_id', 'age_group_name']].drop_duplicates()
+    age.to_csv(
+        os.path.join(out_path, 'ddf--entities--age_group_id.csv'), index=False)
 
     # concepts
     allcol = cb.ix[0].T
     # remove some columns, which will be replaced or won't be used in DDF
-    noneed = [
-        'age_group_id', 'age_group_name', 'metric', 'mean', 'unit', 'upper',
-        'lower'
-    ]
+    noneed = ['metric', 'mean', 'unit', 'upper', 'lower']
     concepts = allcol[~allcol.index.isin(noneed)].reset_index()
     # append the measures in DDF
     concepts.columns = ['concept', 'name']
@@ -86,9 +84,11 @@ if __name__ == '__main__':
     # set concept types
     concepts = concepts.set_index('concept')
     concepts.ix[measures, 'concept_type'] = 'measure'
-    concepts.ix[['location_id', 'sex_id'], 'concept_type'] = 'entity_domain'
-    concepts.ix[['location_code', 'location_name', 'sex_name'],
-                'concept_type'] = 'string'
+    concepts.ix[['location_id', 'sex_id', 'age_group_id'],
+                'concept_type'] = 'entity_domain'
+    concepts.ix[[
+        'location_code', 'location_name', 'sex_name', 'age_group_name'
+    ], 'concept_type'] = 'string'
     concepts.ix['year', 'concept_type'] = 'time'
     concepts.ix['name', ['concept_type', 'name']] = ['string', 'Name']
 
