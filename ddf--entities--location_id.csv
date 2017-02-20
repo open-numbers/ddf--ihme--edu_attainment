@@ -1,0 +1,218 @@
+location_id,location_code,location_name
+160,AFG,Afghanistan
+168,AGO,Angola
+43,ALB,Albania
+74,AND,Andorra
+156,ARE,United Arab Emirates
+97,ARG,Argentina
+33,ARM,Armenia
+105,ATG,Antigua and Barbuda
+71,AUS,Australia
+75,AUT,Austria
+34,AZE,Azerbaijan
+175,BDI,Burundi
+76,BEL,Belgium
+200,BEN,Benin
+201,BFA,Burkina Faso
+161,BGD,Bangladesh
+45,BGR,Bulgaria
+140,BHR,Bahrain
+106,BHS,The Bahamas
+44,BIH,Bosnia and Herzegovina
+57,BLR,Belarus
+108,BLZ,Belize
+121,BOL,Bolivia
+135,BRA,Brazil
+107,BRB,Barbados
+66,BRN,Brunei
+162,BTN,Bhutan
+193,BWA,Botswana
+169,CAF,Central African Republic
+101,CAN,Canada
+94,CHE,Switzerland
+98,CHL,Chile
+6,CHN,China
+205,CIV,Cote d'Ivoire
+202,CMR,Cameroon
+171,COD,Democratic Republic of the Congo
+170,COG,Congo
+125,COL,Colombia
+176,COM,Comoros
+203,CPV,Cape Verde
+126,CRI,Costa Rica
+109,CUB,Cuba
+77,CYP,Cyprus
+47,CZE,Czech Republic
+81,DEU,Germany
+177,DJI,Djibouti
+110,DMA,Dominica
+78,DNK,Denmark
+111,DOM,Dominican Republic
+139,DZA,Algeria
+122,ECU,Ecuador
+141,EGY,Egypt
+178,ERI,Eritrea
+92,ESP,Spain
+58,EST,Estonia
+179,ETH,Ethiopia
+79,FIN,Finland
+22,FJI,Fiji
+80,FRA,France
+25,FSM,Federated States of Micronesia
+1,G,Global
+173,GAB,Gabon
+95,GBR,United Kingdom
+35,GEO,Georgia
+207,GHA,Ghana
+208,GIN,Guinea
+206,GMB,The Gambia
+209,GNB,Guinea-Bissau
+172,GNQ,Equatorial Guinea
+82,GRC,Greece
+112,GRD,Grenada
+128,GTM,Guatemala
+113,GUY,Guyana
+129,HND,Honduras
+46,HRV,Croatia
+114,HTI,Haiti
+48,HUN,Hungary
+11,IDN,Indonesia
+163,IND,India
+84,IRL,Ireland
+142,IRN,Iran
+143,IRQ,Iraq
+83,ISL,Iceland
+85,ISR,Israel
+86,ITA,Italy
+115,JAM,Jamaica
+144,JOR,Jordan
+67,JPN,Japan
+36,KAZ,Kazakhstan
+180,KEN,Kenya
+37,KGZ,Kyrgyzstan
+10,KHM,Cambodia
+23,KIR,Kiribati
+68,KOR,South Korea
+145,KWT,Kuwait
+12,LAO,Laos
+146,LBN,Lebanon
+210,LBR,Liberia
+147,LBY,Libya
+116,LCA,Saint Lucia
+17,LKA,Sri Lanka
+194,LSO,Lesotho
+60,LTU,Lithuania
+87,LUX,Luxembourg
+59,LVA,Latvia
+148,MAR,Morocco
+61,MDA,Moldova
+181,MDG,Madagascar
+14,MDV,Maldives
+130,MEX,Mexico
+24,MHL,Marshall Islands
+49,MKD,Macedonia
+211,MLI,Mali
+88,MLT,Malta
+15,MMR,Myanmar
+50,MNE,Montenegro
+38,MNG,Mongolia
+184,MOZ,Mozambique
+212,MRT,Mauritania
+183,MUS,Mauritius
+182,MWI,Malawi
+13,MYS,Malaysia
+195,NAM,Namibia
+213,NER,Niger
+214,NGA,Nigeria
+131,NIC,Nicaragua
+89,NLD,Netherlands
+90,NOR,Norway
+164,NPL,Nepal
+72,NZL,New Zealand
+150,OMN,Oman
+165,PAK,Pakistan
+132,PAN,Panama
+123,PER,Peru
+16,PHL,Philippines
+26,PNG,Papua New Guinea
+51,POL,Poland
+7,PRK,North Korea
+91,PRT,Portugal
+136,PRY,Paraguay
+149,PSE,Palestine
+151,QAT,Qatar
+65,R1,High-income Asia Pacific
+73,R10,Western Europe
+120,R11,Andean Latin America
+124,R12,Central Latin America
+96,R13,Southern Latin America
+134,R14,Tropical Latin America
+138,R15,North Africa and Middle East
+100,R16,High-income North America
+21,R17,Oceania
+167,R18,Central Sub-Saharan Africa
+174,R19,Eastern Sub-Saharan Africa
+32,R2,Central Asia
+192,R20,Southern Sub-Saharan Africa
+199,R21,Western Sub-Saharan Africa
+5,R3,East Asia
+159,R4,South Asia
+9,R5,Southeast Asia
+70,R6,Australasia
+104,R7,Caribbean
+42,R8,Central Europe
+56,R9,Eastern Europe
+52,ROU,Romania
+62,RUS,Russia
+185,RWA,Rwanda
+64,S1,High-income
+31,S2,"Central Europe, Eastern Europe, and Central Asia"
+166,S3,Sub-Saharan Africa
+137,S4,North Africa and Middle East
+158,S5,South Asia
+4,S6,"Southeast Asia, East Asia, and Oceania"
+103,S7,Latin America and Caribbean
+152,SAU,Saudi Arabia
+522,SDN,Sudan
+216,SEN,Senegal
+69,SGP,Singapore
+28,SLB,Solomon Islands
+217,SLE,Sierra Leone
+127,SLV,El Salvador
+187,SOM,Somalia
+53,SRB,Serbia
+435,SSD,South Sudan
+215,STP,Sao Tome and Principe
+118,SUR,Suriname
+54,SVK,Slovakia
+55,SVN,Slovenia
+93,SWE,Sweden
+197,SWZ,Swaziland
+186,SYC,Seychelles
+153,SYR,Syria
+204,TCD,Chad
+218,TGO,Togo
+18,THA,Thailand
+39,TJK,Tajikistan
+40,TKM,Turkmenistan
+19,TLS,Timor-Leste
+29,TON,Tonga
+119,TTO,Trinidad and Tobago
+154,TUN,Tunisia
+155,TUR,Turkey
+8,TWN,Taiwan
+189,TZA,Tanzania
+190,UGA,Uganda
+63,UKR,Ukraine
+99,URY,Uruguay
+102,USA,United States
+41,UZB,Uzbekistan
+117,VCT,Saint Vincent and the Grenadines
+133,VEN,Venezuela
+20,VNM,Vietnam
+30,VUT,Vanuatu
+27,WSM,Samoa
+157,YEM,Yemen
+196,ZAF,South Africa
+191,ZMB,Zambia
+198,ZWE,Zimbabwe
