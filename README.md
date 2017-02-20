@@ -43,11 +43,14 @@ Global Educational Attainment 1970-2015
 
 ## Versions
 
+20170220: initial version
 
 ### Revision history
 
 
 ## Data sources summary
+
+All data come from [IHME Global Educational Attainment 1970-2015](http://ghdx.healthdata.org/record/global-educational-attainment-1970-2015).
 
 
 ## Specific information about this indicator
