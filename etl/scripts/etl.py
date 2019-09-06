@@ -4,7 +4,6 @@ import os
 import pandas as pd
 import numpy as np
 from ddf_utils.str import to_concept_id
-from ddf_utils.index import get_datapackage
 
 # path
 source_path = '../source/IHME_GLOBAL_EDUCATIONAL_ATTAINMENT_1970_2015/'
@@ -53,6 +52,7 @@ if __name__ == '__main__':
             df_out[
                 ['location', 'age_group', 'sex']] = (df_out[['location', 'age_group', 'sex']]
                                                      .applymap(to_concept_id))
+            df_out = df_out.drop_duplicates()
             df_out.to_csv(
                 os.path.join(
                     out_path,
@@ -81,7 +81,7 @@ if __name__ == '__main__':
         os.path.join(out_path, 'ddf--entities--age_group.csv'))
 
     # concepts
-    allcol = cb.ix[0].T
+    allcol = cb.iloc[0].T
     # remove some columns, which will be replaced or won't be used in DDF
     noneed = ['metric', 'mean', 'unit', 'upper', 'lower']
     concepts = allcol[~allcol.index.isin(noneed)].reset_index()
@@ -99,19 +99,19 @@ if __name__ == '__main__':
                      columns=['concept', 'name']))
     # set concept types
     concepts = concepts.set_index('concept')
-    concepts.ix[measures, 'concept_type'] = 'measure'
-    concepts.ix[['location', 'sex', 'age_group'],
-                'concept_type'] = 'entity_domain'
-    concepts.ix[[
+    concepts.loc[measures, 'concept_type'] = 'measure'
+    concepts.loc[['location', 'sex', 'age_group'],
+                 'concept_type'] = 'entity_domain'
+    concepts.loc[[
         'location_code', 'location_name', 'sex_name', 'age_group_name',
         'location_id', 'sex_id', 'age_group_id'
     ], 'concept_type'] = 'string'
-    concepts.ix['year', 'concept_type'] = 'time'
-    concepts.ix['name', ['concept_type', 'name']] = ['string', 'Name']
+    concepts.loc['year', 'concept_type'] = 'time'
+    concepts.loc['name', ['concept_type', 'name']] = ['string', 'Name']
 
     concepts.to_csv(os.path.join(out_path, 'ddf--concepts.csv'))
 
     # datapackage
-    get_datapackage(out_path, use_existing=True, to_disk=True)
+    # get_datapackage(out_path, use_existing=True, to_disk=True)
 
     print('Done.')
