@@ -1,16 +1,9 @@
 {
-    "name": "ddf--ihme--edu_attainment",
     "language": {
         "name": "English",
-        "id": "en"
+        "id": "en-US"
     },
-    "title": "Global Educational Attainment 1970-2015",
-    "description": "Global Educational Attainment 1970-2015",
-    "author": "Gapminder",
-    "license": "BSD-3",
-    "translations": [],
-    "version": "0.0.1",
-    "created": "2019-08-27T13:15:34.872088+00:00",
+    "created": "2024-08-20T03:17:06.288Z",
     "resources": [
         {
             "name": "ddf--concepts",
@@ -27,7 +20,72 @@
                         "name": "concept_type"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--age_group",
+            "path": "ddf--entities--age_group.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "age_group"
+                    },
+                    {
+                        "name": "age_group_id"
+                    },
+                    {
+                        "name": "age_group_name"
+                    }
+                ],
+                "primaryKey": [
+                    "age_group"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--location",
+            "path": "ddf--entities--location.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "location"
+                    },
+                    {
+                        "name": "location_id"
+                    },
+                    {
+                        "name": "location_code"
+                    },
+                    {
+                        "name": "location_name"
+                    }
+                ],
+                "primaryKey": [
+                    "location"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--sex",
+            "path": "ddf--entities--sex.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "sex"
+                    },
+                    {
+                        "name": "sex_id"
+                    },
+                    {
+                        "name": "sex_name"
+                    }
+                ],
+                "primaryKey": [
+                    "sex"
+                ]
             }
         },
         {
@@ -289,63 +347,6 @@
                     "sex",
                     "year"
                 ]
-            }
-        },
-        {
-            "name": "ddf--entities--age_group",
-            "path": "ddf--entities--age_group.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "age_group"
-                    },
-                    {
-                        "name": "age_group_id"
-                    },
-                    {
-                        "name": "age_group_name"
-                    }
-                ],
-                "primaryKey": "age_group"
-            }
-        },
-        {
-            "name": "ddf--entities--location",
-            "path": "ddf--entities--location.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "location"
-                    },
-                    {
-                        "name": "location_id"
-                    },
-                    {
-                        "name": "location_code"
-                    },
-                    {
-                        "name": "location_name"
-                    }
-                ],
-                "primaryKey": "location"
-            }
-        },
-        {
-            "name": "ddf--entities--sex",
-            "path": "ddf--entities--sex.csv",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "sex"
-                    },
-                    {
-                        "name": "sex_id"
-                    },
-                    {
-                        "name": "sex_name"
-                    }
-                ],
-                "primaryKey": "sex"
             }
         }
     ],
